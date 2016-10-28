@@ -1,0 +1,81 @@
+body {
+    color: #000;
+}
+
+img {
+    margin: 5px;
+    border: 1px solid #000;
+}
+
+.imgRatingHolder {
+    width: 160px;
+    height: 145;
+    display: inline-block;
+}
+
+.rating {
+    width: 150px;
+    margin: 10px 5px 0px 5px;
+    text-align: center;
+}
+
+#topic-images {
+    background-color: #101;
+    color: #fff;
+}
+
+.apiImgs {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.head,
+.footer {
+    background-color: #3364b0;
+}
+
+h1,
+h3,
+h4 {
+    font-weight: bold;
+}
+
+.desc,
+h3 {
+    margin: 10px;
+}
+
+h4 {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px green;
+}
+
+.topics {
+    margin: 5px;
+}
+
+.container {
+    background-color: #eee;
+}
+
+footer {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 11px;
+    clear: both;
+}
+
+#search-form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.topic-btns {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

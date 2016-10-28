@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gif Images | Game</title>
+    <!-- Style Sheets -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- content -->
+        <div class="row head">
+            <div class="col-md-12">
+                <h1>GifTastic</h1>
+                <hr>
+            </div>
+        </div>
+        <!-- description -->
+        <div class="row">
+            <div class="col-md-12">
+                <h3>How It Works</h3>
+                <div class="desc">
+                    Please click on any button that you see under Topics section. We will get you 10 images its rating ralated to that topic. Or you can add any topic that you like and add it to the topic section using 'Add to List' button. If you click on an image you can see its animated version. Click again to stop it.
+                </div>
+            </div>
+        </div>
+        <!-- add topic -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-6">
+                    <form id="search-form" class="form-inline">
+                        <div class="form-group">
+                            <label for="user-input">Add a Topic: </label>
+                            <input type="text" class="form-control" placeholder="Please Enter a Topic..." id="user-input">
+                            <input type="button" class="btn-danger btn-sm btn" id="add-to-list" value="Add to List">
+                        </div>
+                    </form>
+                </div>
+                <!--  <div class="col-md-2">
+                    <button type="submit" class="btn-success btn-sm btn" id="add-to-list">Add to list</button>
+                </div> -->
+                <div class="col-md-6"></div>
+            </div>
+        </div>
+        <!-- topic buttons -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="topic-btns">
+                    <h4>Topics</h4>
+                    <div id="buttons-holder"> </div>
+                </div>
+            </div>
+        </div>
+        <!-- images -->
+        <div class="row">
+            <div id="topic-images">
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="row footer">
+            <div class="col-md-12">
+                <footer>
+                    &copy; Copyright 2016 Neethu Jose
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
