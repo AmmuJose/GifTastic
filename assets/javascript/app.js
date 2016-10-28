@@ -20,7 +20,7 @@ var app = {
 
         createAjaxCall: function(topic) {
             var searchTopic = encodeURIComponent(topic);
-            var apiUrl = "http://api.giphy.com/v1/gifs/search";
+            var apiUrl = "https://api.giphy.com/v1/gifs/search";
             apiUrl += '?' + $.param({
                 'q': searchTopic,
                 'limit': 10,
