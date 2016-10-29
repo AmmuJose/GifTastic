@@ -94,3 +94,17 @@ footer {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 736px) {
+    .container {
+        border-radius: 0px;
+    }
+    .border-top-radius {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+    .border-bottom-radius {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+}
