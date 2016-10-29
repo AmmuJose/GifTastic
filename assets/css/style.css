@@ -2,6 +2,15 @@ body {
     color: #000;
 }
 
+.container {
+    background-color: #eee;
+    border-radius: 1.5em;
+}
+
+.no-img {
+    padding: 20px;
+}
+
 img {
     margin: 5px;
     border: 1px solid #000;
@@ -51,15 +60,21 @@ h3 {
 h4 {
     font-size: 20px;
     padding-bottom: 5px;
-    border-bottom: solid 1px green;
+    border-bottom: solid 1px #888;
 }
 
 .topics {
     margin: 5px;
 }
 
-.container {
-    background-color: #eee;
+.border-top-radius {
+    border-top-left-radius: 1.5em;
+    border-top-right-radius: 1.5em;
+}
+
+.border-bottom-radius {
+    border-bottom-left-radius: 1.5em;
+    border-bottom-right-radius: 1.5em;
 }
 
 footer {

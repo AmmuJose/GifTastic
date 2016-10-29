@@ -1,5 +1,10 @@
 var app = {
-        userInputs: ['ocean', 'christmas', 'halloween', 'disney movies'],
+        userInputs: [
+            'christmas',
+            'halloween',
+            'disney movies',
+            'ocean'
+        ],
         userInput: "",
 
         pushUserInputToArray: function() {
@@ -29,36 +34,44 @@ var app = {
             });
             $.ajax({ url: apiUrl, method: 'GET' }).done(function(response) {
                 app.displayTopicInfo(response);
-
+            }).fail(function(err) {
+                var html = "<div class='no-img'>";
+                html += "We couldn't pull any data at this time. Please try again later."
+                html += "</div>"
+                $("#topic-images").html(html);
             });
         },
 
         displayTopicInfo: function(response) {
-            var result = response.data;
-            var d = $('<div>');
-            d.addClass("apiImgs");
-            $.each(result, function(index, value) { 
-                var imgRatingHolder = $('<div>');
-                imgRatingHolder.addClass('imgRatingHolder');
+            console.log(response.data.length);
+            if (response.data.length) {
+                var result = response.data;
+                var d = $('<div>');
+                d.addClass("apiImgs");
+                $.each(result, function(index, value) {
+                    var imgRatingHolder = $('<div>');
+                    imgRatingHolder.addClass('imgRatingHolder');
 
-                var rating = $('<div>');
-                rating.html('Rating:' + value.rating);
-                rating.addClass('rating');
-                imgRatingHolder.append(rating);
+                    var rating = $('<div>');
+                    rating.html('Rating:' + value.rating);
+                    rating.addClass('rating');
+                    imgRatingHolder.append(rating);
 
-                var imgTag = $('<img>');
-                imgTag.attr('src', value.images.downsized_still.url);
-                imgTag.attr('width', 150);
-                imgTag.attr('height', 120);
-                imgTag.addClass('gif');
-                imgTag.attr('data-still', value.images.downsized_still.url);
-                imgTag.attr('data-animate', value.images.downsized.url);
-                imgTag.attr('data-state', 'still');
-                imgRatingHolder.append(imgTag);
-                d.append(imgRatingHolder);
-            });
-
-            $("#topic-images").html(d);
+                    var imgTag = $('<img>');
+                    imgTag.attr('src', value.images.downsized_still.url);
+                    imgTag.attr('width', 150);
+                    imgTag.attr('height', 120);
+                    imgTag.addClass('gif');
+                    imgTag.attr('data-still', value.images.downsized_still.url);
+                    imgTag.attr('data-animate', value.images.downsized.url);
+                    imgTag.attr('data-state', 'still');
+                    imgRatingHolder.append(imgTag);
+                    d.append(imgRatingHolder);
+                });
+                $("#topic-images").html(d);
+            } else {
+                $("#topic-images").html("<div class='no-img'>No Image Related To This Topic Available.</div>");
+            }
         },
 
         changeImgState: function(imgObj) {
