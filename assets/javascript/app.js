@@ -7,6 +7,7 @@ var app = {
         ],
         userInput: "",
 
+        // add user entered topics to array
         pushUserInputToArray: function() {
             app.userInput = $("#user-input").val().trim();
             if (app.userInput && ($.inArray(app.userInput, app.userInputs) < 0)) {
@@ -14,6 +15,7 @@ var app = {
             }
         },
 
+        // create buttons for all topics
         displayButtons: function() {
             $("#buttons-holder").empty();
             $.each(app.userInputs, function(index, value) {
@@ -23,6 +25,7 @@ var app = {
             });
         },
 
+        //ajax call
         createAjaxCall: function(topic) {
             var searchTopic = encodeURIComponent(topic);
             var apiUrl = "https://api.giphy.com/v1/gifs/search";
@@ -42,8 +45,9 @@ var app = {
             });
         },
 
+        // create image tags and append it to page
         displayTopicInfo: function(response) {
-            console.log(response.data.length);
+            //console.log(response.data.length);
             if (response.data.length) {
                 var result = response.data;
                 var d = $('<div>');
@@ -74,6 +78,7 @@ var app = {
             }
         },
 
+        //change api image status
         changeImgState: function(imgObj) {
             var state = $(imgObj).attr('data-state');
             if (state == 'still') {
@@ -85,6 +90,7 @@ var app = {
             }
         },
 
+        // event handlers
         setUpEventHandlers: function() {
             app.displayButtons();
             $("#add-to-list").on('click', function() {

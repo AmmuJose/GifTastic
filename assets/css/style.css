@@ -2,6 +2,40 @@ body {
     color: #000;
 }
 
+img {
+    margin: 5px;
+    border: 1px solid #000;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1,
+h3,
+h4 {
+    font-weight: bold;
+}
+
+h4 {
+    font-size: 20px;
+    padding-bottom: 5px;
+    border-bottom: solid 1px #888;
+}
+
+.desc,
+h3 {
+    margin: 10px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-size: 11px;
+    clear: both;
+}
+
 .container {
     background-color: #eee;
     border-radius: 1.5em;
@@ -9,11 +43,6 @@ body {
 
 .no-img {
     padding: 20px;
-}
-
-img {
-    margin: 5px;
-    border: 1px solid #000;
 }
 
 .imgRatingHolder {
@@ -37,30 +66,9 @@ img {
     padding: 20px;
 }
 
-h1 {
-    text-align: center;
-}
-
 .head,
 .footer {
     background-color: #3364b0;
-}
-
-h1,
-h3,
-h4 {
-    font-weight: bold;
-}
-
-.desc,
-h3 {
-    margin: 10px;
-}
-
-h4 {
-    font-size: 20px;
-    padding-bottom: 5px;
-    border-bottom: solid 1px #888;
 }
 
 .topics {
@@ -75,14 +83,6 @@ h4 {
 .border-bottom-radius {
     border-bottom-left-radius: 1.5em;
     border-bottom-right-radius: 1.5em;
-}
-
-footer {
-    text-align: center;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    font-size: 11px;
-    clear: both;
 }
 
 #search-form {
